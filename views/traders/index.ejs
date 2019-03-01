@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= tabTitle %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script defer src='/javascripts/script.js'></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2 id="welcome">Welcome <%= name %>!</h2>
+        <a href="/traders" id="dashboard">Dashboard</a>
+        <a href="/traders/help" id="help">Help</a>
+        <a href="/logout" id="logout">Log Out</a>
+      </nav>
+    </header>
+    <form action="/traders" method="POST">
+      Pick a slime:
+      <input type="text" name="name">
+      <br>
+      <input type="submit" value="Submit">
+    </form> 
+    <div id="viewsCtr">
+      <button id="inventoryBtn" onclick="changeDisplay('inventory')">Inventory</button>
+      <button id="fuseBtn" onclick="changeDisplay('fuse')">Fuse</button>
+      <button id="tradeBtn" onclick="changeDisplay('trade')">Trade</button>
+      <div id="inventoryView">
+        <div id="inventory1">
+
+        </div>
+      </div>
+      <div id="fuseView">
+        <div id="fuse1">
+          <ul>
+            <li>slime 1</li>
+            <li>slime 2</li>
+            <li>slime 3</li>
+            <li>slime 4</li>
+            <li>slime 5</li>
+            <li>slime 6</li>
+            <li>slime 7</li>
+            <li>slime 8</li>
+            <li>slime 9</li>
+            <li>slime 10</li>
+            <li>slime 11</li>
+            <li>slime 12</li>
+            <li>slime 13</li>
+            <li>slime 14</li>
+            <li>slime 15</li>
+          </ul>
+        </div>
+        <div id="fuse2">
+
+        </div>
+        <div id="fuse3">
+
+        </div>
+      </div>
+      <div id="tradeView">
+        <div id="trade1">
+
+        </div>
+        <div id="trade2">
+
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </body>
+</html>

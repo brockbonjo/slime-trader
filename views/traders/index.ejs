@@ -17,8 +17,13 @@
       </nav>
     </header>
     <form action="/traders" method="POST">
-      Pick a slime:
-      <input type="text" name="name">
+      Pick Your First Slime:
+      <select id="Slct1" name="name">
+      <option value="Petra">Petra</option>
+      <option value="Ignis">Ignis</option>
+      <option value="Unda">Unda</option>
+      <option value="Ventus">Ventus</option>
+      </select>
       <br>
       <input type="submit" value="Submit">
     </form> 
@@ -28,27 +33,22 @@
       <button id="tradeBtn" onclick="changeDisplay('trade')">Trade</button>
       <div id="inventoryView">
         <div id="inventory1">
-
+          <ul>
+            <% inventory.forEach(function(s){ %>
+            <li><%= s.name %></li>
+            <% })%>
+          </ul>
+        </div>
+        <div id="inventory2">
+          <!--<img src="/images/petra.png" alt="petra slime">-->
         </div>
       </div>
       <div id="fuseView">
         <div id="fuse1">
           <ul>
-            <li>slime 1</li>
-            <li>slime 2</li>
-            <li>slime 3</li>
-            <li>slime 4</li>
-            <li>slime 5</li>
-            <li>slime 6</li>
-            <li>slime 7</li>
-            <li>slime 8</li>
-            <li>slime 9</li>
-            <li>slime 10</li>
-            <li>slime 11</li>
-            <li>slime 12</li>
-            <li>slime 13</li>
-            <li>slime 14</li>
-            <li>slime 15</li>
+            <% inventory.forEach(function(s){ %>
+            <li><%= s.name %></li>
+            <% })%>
           </ul>
         </div>
         <div id="fuse2">

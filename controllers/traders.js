@@ -7,7 +7,7 @@ module.exports = {
 
 function index(req, res) {
   console.log(req.user);
-  res.render('traders/index', { tabTitle: 'Slime Trader', user: req.user, name: req.user.name});
+  res.render('traders/index', { tabTitle: 'Slime Trader', user: req.user, name: req.user.name, inventory: req.user.inventory});
 }
 
 function help(req, res) {

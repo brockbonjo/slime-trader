@@ -115,7 +115,7 @@ button:hover {
 #inventoryView {
   display: grid;
   grid-template-rows: 250px;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 5px;
   background-color: #801336;
   width: 100%;
@@ -124,6 +124,14 @@ button:hover {
 #inventory1 {
   background-color: #C72C41;
   border: 5px solid #000000;
+}
+#inventory2 {
+  background-color: #C72C41;
+  border: 5px solid #000000;
+  text-align: center;
+}
+#inventory2 > img {
+  margin: 50px;
 }
 
 
